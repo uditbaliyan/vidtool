@@ -4,7 +4,7 @@ Setup: unzip it, run cd vidtool, then pip install .
 
 Python:
 
-python
+```python
 from vidtool import VideoEditor
 
 (VideoEditor("in.mp4")
@@ -13,15 +13,15 @@ from vidtool import VideoEditor
     .logo("logo.png", position="bottom-right", scale=0.12, opacity=0.8)
     .reencode(codec="h264", crf=23)
     .save("out.mp4"))
-
+```
 Command line:
 
-bash
+```bash
 vidtool in.mp4 out.mp4 --flip h --zoom 1.1 --logo logo.png --logo-pos bottom-right
 vidtool in.mp4 out.mp4 --codec h265 --crf 28 --resize 1280x-2
 vidtool in.mp4 out.mp4 --trim 5:20 --speed 1.5 --mute
 vidtool in.mp4 out.mp4 --flip h --dry-run   # prints the ffmpeg command only
-
+```
 What it can do:
 
 Re-encode: h264, h265, vp9 or av1, with quality (crf) and speed preset settings.
