@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vidtool"
+version = "0.1.0"
+description = "Basic video editing (re-encode, flip, zoom, logo overlay...) on top of FFmpeg"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.scripts]
+vidtool = "vidtool.cli:main"
